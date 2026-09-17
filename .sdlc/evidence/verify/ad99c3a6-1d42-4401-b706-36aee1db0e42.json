@@ -1,0 +1,43 @@
+{
+  "run_id": "ad99c3a6-1d42-4401-b706-36aee1db0e42",
+  "queue_task": "94841da2-a39a-49c5-a03e-616196d9d039",
+  "base_sha": "e97bf0704a2126a1d4b82f180adc4cf925e6b90f",
+  "source": ".sdlc/policy.yaml",
+  "at": "2026-09-17T03:30:16.289Z",
+  "deterministic": true,
+  "tests": true,
+  "commandsChanged": false,
+  "commands": [
+    {
+      "cmd": "node test/add.test.js",
+      "exitCode": 0,
+      "durationMs": 174,
+      "timedOut": false,
+      "tail": "ok\n"
+    },
+    {
+      "cmd": "node test/multiply.test.js",
+      "exitCode": 0,
+      "durationMs": 150,
+      "timedOut": false,
+      "tail": "ok\n"
+    }
+  ],
+  "changedFiles": [
+    ".sdlc/binding.json",
+    ".sdlc/evidence/gates.json",
+    ".sdlc/evidence/verify/70b42e08-ac74-449a-a970-492d576c27c1.json",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/prompt.md",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/stderr.log",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/summary.md",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/transcript.jsonl",
+    ".sdlc/runs/last-build.json",
+    "README.md",
+    "src/add.js",
+    "test/multiply.test.js"
+  ],
+  "forbiddenFiles": [
+    ".sdlc/evidence/gates.json",
+    ".sdlc/evidence/verify/70b42e08-ac74-449a-a970-492d576c27c1.json"
+  ]
+}
