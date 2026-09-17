@@ -1,0 +1,7 @@
+{
+  "task_id": "626db74f-2080-44f9-8579-0c4358152332",
+  "slug": "test-sdlc-add-multiply",
+  "title": "TEST-SDLC：为 add 模块增加 multiply 函数",
+  "workflow": "lean",
+  "bound_at": "2026-09-17T03:21:00.329Z"
+}
