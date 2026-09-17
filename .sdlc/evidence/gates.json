@@ -1,0 +1,10 @@
+{
+  "deterministic": true,
+  "authorRun": {
+    "run_id": "70b42e08-ac74-449a-a970-492d576c27c1",
+    "agent_id": "executor:claude",
+    "harness": "claude"
+  },
+  "tests": true,
+  "commands_changed": true
+}

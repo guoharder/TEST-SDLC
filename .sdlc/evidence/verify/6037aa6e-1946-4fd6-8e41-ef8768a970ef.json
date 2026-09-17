@@ -1,0 +1,48 @@
+{
+  "run_id": "6037aa6e-1946-4fd6-8e41-ef8768a970ef",
+  "queue_task": "a7fc3ac8-2fdc-4fcc-9cb5-6c0784a01190",
+  "base_sha": "ef129e981f6544d44f19ead1f96e4f8f89a76142",
+  "source": ".sdlc/policy.yaml",
+  "at": "2026-09-17T08:16:55.208Z",
+  "deterministic": true,
+  "tests": true,
+  "commandsChanged": false,
+  "commands": [
+    {
+      "cmd": "node test/add.test.js",
+      "exitCode": 0,
+      "durationMs": 1048,
+      "timedOut": false,
+      "tail": "ok\n"
+    },
+    {
+      "cmd": "node test/multiply.test.js",
+      "exitCode": 0,
+      "durationMs": 601,
+      "timedOut": false,
+      "tail": "ok\n"
+    }
+  ],
+  "changedFiles": [
+    ".sdlc/evidence/approvals/merge/886f0558-a500-486e-bd1a-f97ddc89a292.json",
+    ".sdlc/evidence/approvals/plan/1198a82d-2299-421c-becb-6408ef0a65ea.json",
+    ".sdlc/evidence/gates.json",
+    ".sdlc/runs/6037aa6e-1946-4fd6-8e41-ef8768a970ef/prompt.md",
+    ".sdlc/runs/6037aa6e-1946-4fd6-8e41-ef8768a970ef/stderr.log",
+    ".sdlc/runs/6037aa6e-1946-4fd6-8e41-ef8768a970ef/summary.md",
+    ".sdlc/runs/6037aa6e-1946-4fd6-8e41-ef8768a970ef/transcript.jsonl",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/prompt.md",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/stderr.log",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/summary.md",
+    ".sdlc/runs/70b42e08-ac74-449a-a970-492d576c27c1/transcript.jsonl",
+    ".sdlc/runs/ad99c3a6-1d42-4401-b706-36aee1db0e42/review-prompt.md",
+    ".sdlc/runs/ad99c3a6-1d42-4401-b706-36aee1db0e42/review-stderr.log",
+    ".sdlc/runs/ad99c3a6-1d42-4401-b706-36aee1db0e42/review-transcript.jsonl",
+    ".sdlc/runs/last-build.json"
+  ],
+  "forbiddenFiles": [
+    ".sdlc/evidence/approvals/merge/886f0558-a500-486e-bd1a-f97ddc89a292.json",
+    ".sdlc/evidence/approvals/plan/1198a82d-2299-421c-becb-6408ef0a65ea.json",
+    ".sdlc/evidence/gates.json"
+  ]
+}

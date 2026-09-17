@@ -1,0 +1,167 @@
+version: 1
+autonomy:
+  default: L2
+  overrides:
+    - match:
+        stage: release
+      level: L0
+    - match:
+        risk_tags:
+          - auth
+          - payments
+          - db-migration
+          - infra
+          - crypto
+          - pii
+          - prod-config
+      level: L1
+escalation_domains:
+  - auth
+  - payments
+  - db-migration
+  - infra
+  - crypto
+  - pii
+  - prod-config
+rules:
+  - id: repo.docs-free
+    on: tool_call
+    match:
+      tool: file.write
+      path: docs/**
+    action: allow
+    floor: false
+  - id: repo.migrations-ask
+    on: tool_call
+    match:
+      tool: file.write
+      path: "**/migrations/**"
+    action: ask
+    floor: false
+  - id: repo.network-egress
+    on: tool_call
+    match:
+      tool: network*
+    action: ask
+    floor: false
+gates:
+  plan:
+    require:
+      - human:tech-lead
+  merge:
+    require:
+      - deterministic:pass
+      - tests:pass
+      - llm-review:pass
+      - human:code-owner
+  release:
+    require:
+      - human:release-manager
+      - canary:healthy
+budgets:
+  run_usd: 5
+  work_item_usd: 50
+  alert_pcts:
+    - 50
+    - 80
+    - 100
+waits:
+  remind_after_h: 24
+  escalate_after_h: 72
+  expire_after_h: 168
+  escalate_to:
+    - owner
+workflow:
+  default_mode: lean
+  allow_quick: true
+  quick_max_files: 5
+  incident_mode: lean
+spawn:
+  max_depth: 1
+  max_children: 4
+  child_budget_usd: 1
+  allow:
+    developer:
+      - developer
+      - cheap
+      - test-writer
+    planner:
+      - spec-writer
+      - developer
+      - cheap
+    reviewer: []
+admission:
+  disabled: []
+verify:
+  red_green_for:
+    - fix
+  commands:
+    - node test/add.test.js
+    - node test/multiply.test.js
+redaction:
+  enabled: true
+  kinds:
+    - secret
+    - token
+    - private-key
+    - password
+    - email
+    - phone
+    - id-number
+    - card
+  skip_keys:
+    - hash
+    - prev_hash
+    - sha
+    - prompt_sha
+    - response_sha
+    - output_sha
+    - model
+    - run_id
+    - work_item
+    - call_id
+    - child_run_id
+    - finding_id
+    - id
+    - key_id
+    - signature
+    - test_hash
+    - recomputed
+  keep_paths:
+    - actor.id
+    - by
+    - requested_by
+    - approver
+    - approved_by
+    - author
+    - reviewer
+retention:
+  hot_days: 90
+  classes:
+    gate.snapshot: 3650
+    verdict: 3650
+    approval.decided: 3650
+    policy.updated: 3650
+    review.feedback: 730
+    cost.tick: 30
+    llm.call: 30
+    tool.call.proposed: 60
+    tool.call.executed: 60
+    policy.decision: 180
+  keep_open_runs: true
+capabilities:
+  default_ttl_s: 900
+  max_ttl_s: 3600
+  audiences:
+    - api
+    - ledger
+    - host:*
+    - tool:*
+evals:
+  min_pass_rate: 0.9
+  max_age_days: 30
+rbac:
+  roles_claim: roles
+  group_roles: {}
+  default_role: viewer
+  tenant_claim: tenant

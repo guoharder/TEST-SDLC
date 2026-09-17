@@ -1,0 +1,37 @@
+{
+  "run_id": "a456393d-5e76-4f55-add1-70bd53ff4973",
+  "queue_task": "b8bd5913-e7e8-407d-b32d-e2c9e922e266",
+  "base_sha": "0ce2eab2e4cfa7dc2240105d43f05a353bcc9653",
+  "source": "package.json",
+  "at": "2026-09-17T03:24:47.267Z",
+  "deterministic": true,
+  "tests": false,
+  "commandsChanged": true,
+  "commands": [
+    {
+      "cmd": "npm run test",
+      "exitCode": 0,
+      "durationMs": 3170,
+      "timedOut": false,
+      "tail": "\n> test\n> node test/add.test.js && node test/multiply.test.js\n\nok\nok\n"
+    }
+  ],
+  "changedFiles": [
+    ".sdlc/README.md",
+    ".sdlc/binding.json",
+    ".sdlc/intents/INT-1.md",
+    ".sdlc/plans/PLAN-1.md",
+    ".sdlc/policy.yaml",
+    ".sdlc/runs/a456393d-5e76-4f55-add1-70bd53ff4973/prompt.md",
+    ".sdlc/runs/a456393d-5e76-4f55-add1-70bd53ff4973/stderr.log",
+    ".sdlc/runs/a456393d-5e76-4f55-add1-70bd53ff4973/summary.md",
+    ".sdlc/runs/a456393d-5e76-4f55-add1-70bd53ff4973/transcript.jsonl",
+    ".sdlc/specs/SPEC-1.md",
+    ".sdlc/work-item.json",
+    "README.md",
+    "package.json",
+    "src/add.js",
+    "test/multiply.test.js"
+  ],
+  "forbiddenFiles": []
+}
