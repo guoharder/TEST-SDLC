@@ -1,1 +1,10 @@
-{}
+{
+  "pr": {
+    "number": 3,
+    "url": "https://github.com/guoharder/TEST-SDLC/pull/3",
+    "base": "main",
+    "head": "agentic/test-sdlc-subtract",
+    "repo": "guoharder/TEST-SDLC",
+    "slug": "test-sdlc-add-subtract"
+  }
+}
