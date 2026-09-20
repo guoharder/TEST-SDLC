@@ -1,0 +1,71 @@
+{
+  "run_id": "f8c84746-719f-43c6-815f-78cfef5b2c6f",
+  "queue_task": "3a85d190-78c8-492d-91f4-dd258244b037",
+  "base_sha": "25cad31617eacf0d52f03bd2d91101dd49eccfac",
+  "source": ".sdlc/policy.yaml",
+  "at": "2026-09-20T10:53:44.442Z",
+  "deterministic": true,
+  "tests": true,
+  "commandsChanged": false,
+  "commands": [
+    {
+      "cmd": "node test/add.test.js",
+      "exitCode": 0,
+      "durationMs": 156,
+      "timedOut": false,
+      "tail": "ok\n"
+    },
+    {
+      "cmd": "node test/multiply.test.js",
+      "exitCode": 0,
+      "durationMs": 158,
+      "timedOut": false,
+      "tail": "ok\n"
+    },
+    {
+      "cmd": "node test/subtract.test.js",
+      "exitCode": 0,
+      "durationMs": 180,
+      "timedOut": false,
+      "tail": "ok\n"
+    }
+  ],
+  "changedFiles": [
+    ".sdlc/binding.json",
+    ".sdlc/evidence/canary.json",
+    ".sdlc/evidence/gates.json",
+    ".sdlc/evidence/verify/703f4ad1-28b3-4839-8cf4-7921027a3272.json",
+    ".sdlc/evidence/verify/c2f23cf7-48c1-4912-9a8d-37fc9335981b.json",
+    ".sdlc/runs/703f4ad1-28b3-4839-8cf4-7921027a3272/prompt.md",
+    ".sdlc/runs/703f4ad1-28b3-4839-8cf4-7921027a3272/stderr.log",
+    ".sdlc/runs/703f4ad1-28b3-4839-8cf4-7921027a3272/summary.md",
+    ".sdlc/runs/703f4ad1-28b3-4839-8cf4-7921027a3272/transcript.jsonl",
+    ".sdlc/runs/c2f23cf7-48c1-4912-9a8d-37fc9335981b/fix-prompt.md",
+    ".sdlc/runs/c2f23cf7-48c1-4912-9a8d-37fc9335981b/fix-stderr.log",
+    ".sdlc/runs/c2f23cf7-48c1-4912-9a8d-37fc9335981b/fix-transcript.jsonl",
+    ".sdlc/runs/c2f23cf7-48c1-4912-9a8d-37fc9335981b/prompt.md",
+    ".sdlc/runs/c2f23cf7-48c1-4912-9a8d-37fc9335981b/stderr.log",
+    ".sdlc/runs/c2f23cf7-48c1-4912-9a8d-37fc9335981b/summary.md",
+    ".sdlc/runs/c2f23cf7-48c1-4912-9a8d-37fc9335981b/transcript.jsonl",
+    ".sdlc/runs/last-build.json",
+    "README.md",
+    "docs/how-to/verify-and-use.md",
+    "docs/reference/api.md"
+  ],
+  "forbiddenFiles": [
+    ".sdlc/evidence/canary.json",
+    ".sdlc/evidence/gates.json",
+    ".sdlc/evidence/verify/703f4ad1-28b3-4839-8cf4-7921027a3272.json",
+    ".sdlc/evidence/verify/c2f23cf7-48c1-4912-9a8d-37fc9335981b.json"
+  ],
+  "security": {
+    "ok": true,
+    "ran": [
+      "secrets",
+      "sast"
+    ],
+    "failed": [],
+    "findings": []
+  },
+  "tree": "9d54aa602a7ee6e3a8b78c825ae1a9c0de2cacc1"
+}
